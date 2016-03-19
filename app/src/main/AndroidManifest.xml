@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.LinearActivity"
+            android:label="@string/title_activity_linear" />
+        <activity
+            android:name=".activity.CctvActivity"
+            android:label="@string/title_activity_cctv" />
     </application>
 
 </manifest>
