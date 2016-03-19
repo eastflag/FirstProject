@@ -10,6 +10,11 @@ import android.widget.Button;
 
 import com.eastflag.firstproject.activity.CctvActivity;
 import com.eastflag.firstproject.activity.LinearActivity;
+import com.eastflag.firstproject.event.Event1Activity;
+import com.eastflag.firstproject.event.Event2Activity;
+import com.eastflag.firstproject.event.Event3Activity;
+import com.eastflag.firstproject.event.Event4Activity;
+import com.eastflag.firstproject.event.Event5Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         Button btn1 = (Button) findViewById(R.id.button1);
         btn1.setOnClickListener(mClick);
         findViewById(R.id.button2).setOnClickListener(mClick);
+        findViewById(R.id.button3).setOnClickListener(mClick);
+        findViewById(R.id.button4).setOnClickListener(mClick);
+        findViewById(R.id.button5).setOnClickListener(mClick);
+        findViewById(R.id.button6).setOnClickListener(mClick);
+        findViewById(R.id.button7).setOnClickListener(mClick);
     }
 
     View.OnClickListener mClick = new View.OnClickListener() {
@@ -34,6 +44,26 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button2:
                     intent = new Intent(MainActivity.this, CctvActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button3:
+                    intent = new Intent(MainActivity.this, Event1Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button4:
+                    intent = new Intent(MainActivity.this, Event2Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button5:
+                    intent = new Intent(MainActivity.this, Event3Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button6:
+                    intent = new Intent(MainActivity.this, Event4Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button7:
+                    intent = new Intent(MainActivity.this, Event5Activity.class);
                     startActivity(intent);
                     break;
             }
