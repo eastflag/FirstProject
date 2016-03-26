@@ -28,7 +28,10 @@
         <activity android:name=".event.Event4Activity" />
         <activity android:name=".event.Event5Activity" />
         <activity android:name=".dynamic.Dynamic1Activity" />
-        <activity android:name=".dynamic.Dynamic2Activity"></activity>
+        <activity
+            android:name=".dynamic.Dynamic2Activity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".dynamic.Dynamic3Activity"></activity>
     </application>
 
 </manifest>
