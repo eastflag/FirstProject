@@ -12,6 +12,7 @@ import com.eastflag.firstproject.activity.CctvActivity;
 import com.eastflag.firstproject.activity.LinearActivity;
 import com.eastflag.firstproject.dynamic.Dynamic1Activity;
 import com.eastflag.firstproject.dynamic.Dynamic2Activity;
+import com.eastflag.firstproject.dynamic.Dynamic3Activity;
 import com.eastflag.firstproject.event.Event1Activity;
 import com.eastflag.firstproject.event.Event2Activity;
 import com.eastflag.firstproject.event.Event3Activity;
@@ -81,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.button33:
-//                    intent = new Intent(MainActivity.this, Event5Activity.class);
-//                    startActivity(intent);
+                    intent = new Intent(MainActivity.this, Dynamic3Activity.class);
+                    startActivity(intent);
                     break;
             }
         }
