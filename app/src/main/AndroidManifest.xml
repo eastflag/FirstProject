@@ -27,7 +27,8 @@
         <activity android:name=".event.Event3Activity" />
         <activity android:name=".event.Event4Activity" />
         <activity android:name=".event.Event5Activity" />
-        <activity android:name=".dynamic.Dynamic1Activity"></activity>
+        <activity android:name=".dynamic.Dynamic1Activity" />
+        <activity android:name=".dynamic.Dynamic2Activity"></activity>
     </application>
 
 </manifest>

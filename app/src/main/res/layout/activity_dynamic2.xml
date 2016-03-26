@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dynamic2_button_selector"
+            android:textColor="@drawable/dynamic2_button_text"
+            android:text="Tab1"
+            android:id="@+id/btnTab1" />
+
+        <Button
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp" android:layout_marginLeft="1dp"
+            android:background="@drawable/dynamic2_button_selector"
+            android:textColor="@drawable/dynamic2_button_text"
+            android:text="Tab2"
+            android:id="@+id/btnTab2" />
+
+        <Button
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dynamic2_button_selector"
+            android:textColor="@drawable/dynamic2_button_text"
+            android:text="Tab3"
+            android:id="@+id/btnTab3" />
+
+    </LinearLayout>
+</LinearLayout>
