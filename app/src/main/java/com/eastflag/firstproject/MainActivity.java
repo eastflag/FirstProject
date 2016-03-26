@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.eastflag.firstproject.activity.CctvActivity;
 import com.eastflag.firstproject.activity.LinearActivity;
+import com.eastflag.firstproject.dynamic.Dynamic1Activity;
 import com.eastflag.firstproject.event.Event1Activity;
 import com.eastflag.firstproject.event.Event2Activity;
 import com.eastflag.firstproject.event.Event3Activity;
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button5).setOnClickListener(mClick);
         findViewById(R.id.button6).setOnClickListener(mClick);
         findViewById(R.id.button7).setOnClickListener(mClick);
+        findViewById(R.id.button31).setOnClickListener(mClick);
+        findViewById(R.id.button32).setOnClickListener(mClick);
+        findViewById(R.id.button33).setOnClickListener(mClick);
     }
 
     View.OnClickListener mClick = new View.OnClickListener() {
@@ -65,6 +69,19 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.button7:
                     intent = new Intent(MainActivity.this, Event5Activity.class);
                     startActivity(intent);
+                    break;
+                //버튼 동적 생성
+                case R.id.button31:
+                    intent = new Intent(MainActivity.this, Dynamic1Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button32:
+//                    intent = new Intent(MainActivity.this, Event5Activity.class);
+//                    startActivity(intent);
+                    break;
+                case R.id.button33:
+//                    intent = new Intent(MainActivity.this, Event5Activity.class);
+//                    startActivity(intent);
                     break;
             }
         }
