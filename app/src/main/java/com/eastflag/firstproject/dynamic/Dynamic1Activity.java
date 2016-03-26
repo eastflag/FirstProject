@@ -1,5 +1,6 @@
 package com.eastflag.firstproject.dynamic;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -18,11 +19,17 @@ public class Dynamic1Activity extends AppCompatActivity {
         Button btn = new Button(this);
 
         //2. 뷰속성 설정
+        btn.setText("동적생성버튼");
+        btn.setTextColor(0xFFFF0000);
+        //btn.setTextColor(Color.RED);
 
         //3. 배치 속성 설정
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
 
         //4. 부모에 배치
         LinearLayout root = (LinearLayout) findViewById(R.id.rootLayout);
-        root.addView(btn);
+        root.addView(btn, params);
     }
 }
