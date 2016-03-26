@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.eastflag.firstproject.activity.CctvActivity;
 import com.eastflag.firstproject.activity.LinearActivity;
+import com.eastflag.firstproject.component.ImplicityActivity;
 import com.eastflag.firstproject.component.SendActivity;
 import com.eastflag.firstproject.dynamic.Dynamic1Activity;
 import com.eastflag.firstproject.dynamic.Dynamic2Activity;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button32).setOnClickListener(mClick);
         findViewById(R.id.button33).setOnClickListener(mClick);
         findViewById(R.id.button34).setOnClickListener(mClick);
+        findViewById(R.id.button35).setOnClickListener(mClick);
     }
 
     View.OnClickListener mClick = new View.OnClickListener() {
@@ -89,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button34:
                     intent = new Intent(MainActivity.this, SendActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button35:
+                    intent = new Intent(MainActivity.this, ImplicityActivity.class);
                     startActivity(intent);
                     break;
             }
