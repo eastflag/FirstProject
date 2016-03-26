@@ -81,4 +81,10 @@
             android:id="@+id/button33" />
     </LinearLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="암시적인텐트1"
+        android:id="@+id/button34" />
+
 </LinearLayout>

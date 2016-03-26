@@ -31,7 +31,16 @@
         <activity
             android:name=".dynamic.Dynamic2Activity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".dynamic.Dynamic3Activity"></activity>
+        <activity android:name=".dynamic.Dynamic3Activity" />
+        <activity android:name=".component.SendActivity" />
+        <activity android:name=".component.ReceiveActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".component.ImplicityActivity"></activity>
     </application>
 
 </manifest>
