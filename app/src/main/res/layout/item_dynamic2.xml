@@ -5,22 +5,22 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right">
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center_vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:textSize="20dp"
-            android:background="@drawable/popup_inline_error_above_am"
+            android:textSize="20dp" android:padding="15dp"
+            android:background="@android:drawable/picture_frame"
             android:id="@+id/tvText" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:id="@+id/imageView4"
-            android:background="@drawable/coffee1"/>
+            android:background="@drawable/emo_im_laughing"/>
     </LinearLayout>
 </LinearLayout>

@@ -30,7 +30,7 @@
         <activity android:name=".dynamic.Dynamic1Activity" />
         <activity
             android:name=".dynamic.Dynamic2Activity"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".dynamic.Dynamic3Activity" />
         <activity android:name=".component.SendActivity" />
         <activity android:name=".component.ReceiveActivity">

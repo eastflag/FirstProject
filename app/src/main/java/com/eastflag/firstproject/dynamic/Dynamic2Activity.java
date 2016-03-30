@@ -1,9 +1,11 @@
 package com.eastflag.firstproject.dynamic;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -55,6 +57,13 @@ public class Dynamic2Activity extends AppCompatActivity {
                 TextView tvText = (TextView) view.findViewById(R.id.tvText);
                 tvText.setText(etSend.getText().toString());
                 root.addView(view);
+
+                //editText clear
+                etSend.setText("");
+                //키보드 내리기
+                InputMethodManager imm = (InputMethodManager)
+                        getSystemService(Activity.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
             }
         });
     }
