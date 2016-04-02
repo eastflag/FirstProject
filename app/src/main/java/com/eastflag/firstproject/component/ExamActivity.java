@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -18,10 +19,14 @@ import android.widget.TextView;
 
 import com.eastflag.firstproject.R;
 
+import java.io.File;
+import java.io.IOException;
+
 public class ExamActivity extends Activity {
 
     public static final int GET_GALLERY = 100;
     public static final int GET_CONTACT = 200;
+    public static final int GET_CAMERA = 300;
     private ImageView imgPicture;
     private TextView tvDisplay;
 
@@ -52,6 +57,23 @@ public class ExamActivity extends Activity {
                 intent.setData(ContactsContract.Contacts.CONTENT_URI);
                 intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
                 startActivityForResult(intent, GET_CONTACT);
+            }
+        });
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 카메라 호출
+                Intent intent = new Intent();
+                intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(getTempFile()));
+                intent.putExtra("crop", "true");
+                intent.putExtra("outputX", 600);
+                intent.putExtra("outputY", 600);
+                intent.putExtra("aspectX", 1);
+                intent.putExtra("aspectY", 1);
+                       //intent.putExtra("scale", true);
+                intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+                startActivityForResult(intent, GET_CAMERA);
             }
         });
     }
@@ -97,9 +119,24 @@ public class ExamActivity extends Activity {
                     }
                     phoneCur.close();
                     break;
+                case GET_CAMERA:
+                    Bitmap bitmap2 = BitmapFactory.decodeFile(getTempFile().getAbsolutePath());
+                    imgPicture.setImageBitmap(bitmap2);
+                    break;
             }
         }
 
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+    private File getTempFile() {
+        File f = new File(Environment.getExternalStorageDirectory(), "temp.jpg");
+        try {
+            f.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
+
 }
