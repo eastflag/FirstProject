@@ -97,7 +97,11 @@
             android:layout_height="wrap_content"
             android:text="암시적인텐트2"
             android:id="@+id/button35" />
-
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주소록호출"
+        android:id="@+id/button41" />
 
 </LinearLayout>
