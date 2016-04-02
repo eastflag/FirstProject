@@ -101,7 +101,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="주소록호출"
+        android:text="갤러리,주소록,카메라,"
         android:id="@+id/button41" />
 
 </LinearLayout>
