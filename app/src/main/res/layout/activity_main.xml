@@ -103,5 +103,10 @@
         android:layout_height="wrap_content"
         android:text="갤러리,주소록,카메라,"
         android:id="@+id/button41" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MusicPlayer"
+        android:id="@+id/button51" />
 
 </LinearLayout>

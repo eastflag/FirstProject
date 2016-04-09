@@ -16,7 +16,7 @@ public class MyReceiver extends BroadcastReceiver {
             Toast.makeText(context, "사용자메시지 수신", Toast.LENGTH_SHORT).show();
         } else if (intent.getAction().equals("android.media.VOLUME_CHANGED_ACTION")) {
             //볼륨업다운
-            Toast.makeText(context, "volume changed", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context, "volume changed", Toast.LENGTH_SHORT).show();
         }
 
 

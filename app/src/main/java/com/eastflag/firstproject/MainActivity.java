@@ -12,6 +12,8 @@ import com.eastflag.firstproject.activity.CctvActivity;
 import com.eastflag.firstproject.activity.LinearActivity;
 import com.eastflag.firstproject.component.ExamActivity;
 import com.eastflag.firstproject.component.ImplicityActivity;
+import com.eastflag.firstproject.component.MusicService;
+import com.eastflag.firstproject.component.PlayerActivity;
 import com.eastflag.firstproject.component.SendActivity;
 import com.eastflag.firstproject.dynamic.Dynamic1Activity;
 import com.eastflag.firstproject.dynamic.Dynamic2Activity;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button34).setOnClickListener(mClick);
         findViewById(R.id.button35).setOnClickListener(mClick);
         findViewById(R.id.button41).setOnClickListener(mClick);
+        findViewById(R.id.button51).setOnClickListener(mClick);
     }
 
     View.OnClickListener mClick = new View.OnClickListener() {
@@ -101,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button41:
                     intent = new Intent(MainActivity.this, ExamActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button51:
+                    intent = new Intent(MainActivity.this, PlayerActivity.class);
                     startActivity(intent);
                     break;
             }
